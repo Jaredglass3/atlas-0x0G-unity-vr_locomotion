@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Starting menu.unity
     guid: afdb56e79c1029e46aa3ff33e3c9c2d3
   - enabled: 1
-    path: Assets/FPS Hangar Environments/Scene/Hangar.unity
+    path: Assets/Scenes/Zombie-Hangar.unity
     guid: 041c9849c1427104ab78c9b4bb17050b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
