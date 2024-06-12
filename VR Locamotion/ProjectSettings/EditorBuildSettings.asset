@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Starting menu.unity
+    guid: afdb56e79c1029e46aa3ff33e3c9c2d3
+  - enabled: 1
     path: Assets/FPS Hangar Environments/Scene/Hangar.unity
     guid: 041c9849c1427104ab78c9b4bb17050b
   m_configObjects:
