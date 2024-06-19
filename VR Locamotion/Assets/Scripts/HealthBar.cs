@@ -5,9 +5,9 @@ using TMPro;
 public class HealthBar : MonoBehaviour
 {
     public Image healthFillImage;
-    public TMP_Text healthText; // Add this line
-    private float currentHealth;
-    private float maxHealth;
+    public TMP_Text healthText;
+    public float currentHealth;
+    public float maxHealth;
 
     private void Start()
     {
@@ -29,6 +29,6 @@ public class HealthBar : MonoBehaviour
     private void UpdateHealthBar()
     {
         healthFillImage.fillAmount = currentHealth / maxHealth;
-        healthText.text = "Health: " + currentHealth.ToString("F0"); // Update the text
+        healthText.text = "Health: " + currentHealth.ToString("F0");
     }
 }

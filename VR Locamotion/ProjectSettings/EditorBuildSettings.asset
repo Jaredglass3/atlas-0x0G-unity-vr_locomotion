@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zombie-Hangar.unity
     guid: 041c9849c1427104ab78c9b4bb17050b
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 3945a2f548f8865499fdcc3b45f1f5d6
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: b38f4b0b8fdb90f48b62f1b980e6b9da
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

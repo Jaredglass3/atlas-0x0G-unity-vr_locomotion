@@ -5,16 +5,18 @@ using TMPro;
 public class ZombieHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
     public Image healthBarImage; // Assign the health bar Image here
     public TMP_Text healthText; // Assign the TMP text component here
     private Animator animator;
     private bool isDead = false;
+    private ZombieMovement zombieMovement;
 
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+        zombieMovement = GetComponent<ZombieMovement>();
         UpdateHealthBar();
     }
 
@@ -48,10 +50,16 @@ public class ZombieHealth : MonoBehaviour
     {
         isDead = true;
 
-        // Set the isDead parameter to true to trigger the death animation
+        // Trigger the death animation
         if (animator != null)
         {
-            animator.SetBool("isDead", true);
+            animator.SetTrigger("Death");
+        }
+
+        // Stop movement and attack
+        if (zombieMovement != null)
+        {
+            zombieMovement.StopMovementAndAttack();
         }
 
         // Disable components that should not function after death
@@ -60,7 +68,7 @@ public class ZombieHealth : MonoBehaviour
 
     void DisableComponents()
     {
-       // Disable collider
+        // Disable collider
         Collider collider = GetComponent<Collider>();
         if (collider != null)
         {
