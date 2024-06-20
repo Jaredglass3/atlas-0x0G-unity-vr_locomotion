@@ -12,6 +12,9 @@ public class ZombieHealth : MonoBehaviour
     private bool isDead = false;
     private ZombieMovement zombieMovement;
 
+    // Reference to game manager or UI manager
+    public GameManager gameManager; // Assign this in the Inspector
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -64,6 +67,12 @@ public class ZombieHealth : MonoBehaviour
 
         // Disable components that should not function after death
         DisableComponents();
+
+        // Notify game manager about the kill
+        if (gameManager != null)
+        {
+            gameManager.IncreaseKillCount();
+        }
     }
 
     void DisableComponents()
